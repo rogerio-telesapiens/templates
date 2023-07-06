@@ -10,6 +10,8 @@ const $owlCarousel = $("#carousel-home .owl-carousel").owlCarousel({
   loop: true,
   nav: false,
   dots:true,
+  autoplay: true,
+  smartSpeed: 1000,
 	responsive:{
         0:{
              dots:false

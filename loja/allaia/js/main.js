@@ -353,3 +353,27 @@
 	
 
 })(window.jQuery); 
+
+// mecanismo de pesquisa (PRECISA DE AJUSTE)
+function mySearch() {
+	// Declare variables
+	var input, filter, table, tr, td, i, txtValue;
+	input = document.getElementById('buscarItemTabela');
+	filter = input.value.toUpperCase();
+	table = document.querySelector("table");
+	tr = table.querySelectorAll(".tableBase");
+  
+	// Loop through all table rows, and hide those who don't match the search query
+	for (i = 0; i < tr.length; i++) {
+	  td = tr[i].getElementsByTagName("td");
+	  for (j = 0; j < td.length; j++) {
+		txtValue = td[j].textContent || td[j].innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		  tr[i].style.display = "";
+		  break;
+		} else {
+		  tr[i].style.display = "none";
+		}
+	  }
+	}
+  }
