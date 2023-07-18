@@ -148,8 +148,8 @@ if(widthwindaw+17 <= 991){
 
 // horizontal arrowss
 var view = $("#mainnav");
-var move = "500px";
-var leftsideLimit = -500
+var move = "100px";
+var leftsideLimit = -100
 
 // var Windowwidth = jQuery(window).width();
 // get wrapper width
@@ -222,5 +222,5 @@ $("#left-arrow").click(function () {
         }
     });
     $('.custom-scrollbar').animate({
-        //scrollTop: $('a.nav-link.menu-title.active').offset().top - 500
+        //scrollTop: $('a.nav-link.menu-title.active').offset().top - 100
     }, 1000);
