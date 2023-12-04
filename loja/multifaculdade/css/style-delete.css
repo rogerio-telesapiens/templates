@@ -2618,7 +2618,7 @@ div#logo{
 
 .img_dft{
   height: 240px;
-  /* width: 100%; */
+  width: 100%;
   image-rendering: crisp-edges;
 }
 
@@ -2646,10 +2646,6 @@ div#logo{
   padding-right: 25px;
 }
 
-.body-container-menu-column-4 h1 {
-  text-align: center;
-}
-
 h1 strong {
   font-size: 2.25rem !important;
 }
@@ -2664,11 +2660,6 @@ iframe {
   border-radius: 15px;
   display: inline-flex !important;
   margin-left: 15% !important;
-}
-
-.table-responsive {
-  min-width: 400px;
-  width: 50%;
 }
 
 @media (max-width: 1024px) {
