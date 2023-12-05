@@ -38,12 +38,14 @@ main.detCurso{
 }
 
 a{
+
     color: var(--var-corPrincipal) !important;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     cursor: pointer !important;
     text-decoration: underline !important;
+
 }
 
 h1{
@@ -124,6 +126,7 @@ p{
 .w50{
     /* não utilizar para conteúdo se não 
     houver uma w50 com imagem antes */
+
     width: 50%;
 }
 
@@ -348,6 +351,7 @@ img.img_icon_40{
 
 .table-striped tbody tr:nth-of-type(even) {
     background-color: transparent !important;
+
 }
 
 /* Mobile */
@@ -369,5 +373,5 @@ img.img_icon_40{
         display: none;
     }
 
-
 }
+
