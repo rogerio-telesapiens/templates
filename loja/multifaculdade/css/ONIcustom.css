@@ -37,13 +37,18 @@ main.detCurso{
     gap: 100px;
 }
 
-a{
-    color: var(--var-corPrincipal) !important;
+main.detCurso a{
+    color: var(--var-corPrincipal);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     cursor: pointer !important;
-    text-decoration: underline !important;
+    text-decoration: underline;
+}
+
+main.detCurso a.btn_multi{
+    color: var(--bg-color) !important;
+    text-decoration: none !important;
 }
 
 h1{
@@ -357,7 +362,7 @@ img.img_icon_40{
         flex-direction: column;
     }
 
-    .pad64 {
+    .pad64, .pad170 {
         padding: 15px;
     }
 
