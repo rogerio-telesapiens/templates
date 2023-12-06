@@ -62,8 +62,8 @@ h2.numberRound{
     color: var(--bg-color);
     background: var(--var-corPrincipal);
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     padding: auto;
     text-align: center;
 }
@@ -72,8 +72,8 @@ h2.numberRound_invert{
     color: var(--var-corPrincipal);
     background: transparent;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     padding: auto;
     text-align: center;
     border: 1px solid var(--var-corPrincipal);
@@ -198,7 +198,7 @@ main.detCurso form{
 .flexinline_8{
     display: inline-flex;
     gap: 8px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .flexinline_16{
@@ -279,11 +279,11 @@ main.detCurso form{
 
 /* Modal */
 #login{
-    display: block;
+    display: none;
 }
 
 #cadastro{
-    display: none;
+    display: block;
 }
 
 /* Button */
