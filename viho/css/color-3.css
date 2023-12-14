@@ -12449,7 +12449,8 @@ table.dataTable.display tbody tr {
       .product-box .modal .modal-header .product-box .product-details .product-qnty .addcart-btn .btn {
         font-weight: 600; }
   .product-box .product-img {
-    position: relative; }
+    position: relative; 
+      text-align: center;}
     .product-box .product-img .product-hover {
       position: absolute;
       height: 100%;
