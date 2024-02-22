@@ -701,11 +701,11 @@ form label {
     margin-bottom: 60px;
 }
 
-#contato-inicial{
+#contato_inicial, #contato-inicial{
     display: initial;
 }
 
-#contato-final{
+#contato_final, #contato-final{
     display: none;
 }
 
