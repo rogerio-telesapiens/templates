@@ -702,7 +702,7 @@ form label {
 }
 
 #contato_inicial, #contato-inicial{
-    display: initial;
+    display: block;
 }
 
 #contato_final, #contato-final{
