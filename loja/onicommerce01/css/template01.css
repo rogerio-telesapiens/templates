@@ -702,7 +702,7 @@ span.etapa-cad.atv {
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 32px;
     background: var(--color-Middle);
 }
 
@@ -717,14 +717,23 @@ span.etapa-cad.atv {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* align-items: center; */
+}
+
+.curso_detalhe{
+    margin: 24px 48px;
 }
 
 #curso_detalhe {
-    padding: 48px 96px 0 48px;
+    padding: 0 0 0 48px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 48px;
+}
+
+#curso_detalhe_regua, div#curso_detalhe_regua\ desktop {
+    padding: 24px 48px 0;
 }
 
 .cardH {
@@ -796,6 +805,7 @@ span.etapa-cad.atv {
     max-height: 380px;
     width: auto;
     object-fit: contain;
+    border-radius: 16px;
 }
 
 ul.matriz {
@@ -830,6 +840,10 @@ ul.matriz li:last-child {
     justify-content: flex-start;
     gap: 32px;
 
+}
+
+#perfil .blc-default{
+    width: 50vw;
 }
 
 #perfil .blc-default_content {
@@ -893,7 +907,7 @@ ul.matriz li:last-child {
 .centerVH {
     width: fit-content;
     height: 30vh;
-    margin: 10%;
+    margin: 10% 0;
     text-align: center;
     position: relative;
     left: 50%;
