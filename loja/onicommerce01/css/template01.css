@@ -972,6 +972,7 @@ ul.matriz li:last-child {
     display: flex;
     flex-direction: column;
     gap: 48px;
+    contain: layout;
 }
 
 #cartao .cardH {
