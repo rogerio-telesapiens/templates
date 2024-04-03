@@ -12,6 +12,10 @@
 /* 0 - Import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
 
 
@@ -55,6 +59,7 @@ body {
     background: var(--color-bg);
     color: var(--color-fg);
     font-family: 'Inter', sans-serif !important;
+    margin: 0;
 }
 
 header {
@@ -98,7 +103,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-detHver);
+    color: var(--color-det);
 }
 
 button {
@@ -192,11 +197,16 @@ form label {
 .form-group {
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 /* 3 - Blocos */
 .center {
     text-align: center;
+}
+
+.centerMobile{
+    text-align: left;
 }
 
 .blc-cards{
@@ -210,7 +220,7 @@ form label {
     transform: translateX(-50%);
 }
 
-.blc-det {
+.blc-det, .blc_detCursoResumo {
     display: flex;
     padding: 32px 40px;
     flex-direction: column;
@@ -226,9 +236,11 @@ form label {
 }
 
 .blc-det-min {
-    width: fit-content;
+    width: auto;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
     gap: 8px;
     padding: 18px 32px;
     border-radius: 12px;
@@ -449,6 +461,10 @@ form label {
     line-height: 14.4px;
 }
 
+#det-curso .blc-det {
+    align-self: center;
+}
+
 #det-curso .blc-det p {
     color: var(--gray-color-color-600-gray, #868E96);
     font-family: Inter;
@@ -596,7 +612,7 @@ form label {
 }
 
 .jc-spaceB {
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 
 .jc-end {
@@ -754,6 +770,7 @@ form label {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 12px;
 }
 
 .footer-atendimento .ph-phone-call {
@@ -862,31 +879,6 @@ p.legendas img.responsive-img {
     max-height: 500px;
     border-radius: 8px;
     border: none;
-}
-
-.img-background {
-    position: sticky;
-    top: 0;
-    left: 0;
-    /* background-image: url("/assets/img/figma/450ad00c04e58a001993fdb98b727565.png"); */
-    background-size: cover;
-    /* Ajusta o tamanho da imagem para cobrir toda a div */
-    background-position: center;
-    /* Centraliza a imagem */
-    height: 100vh;
-    contain: content;
-}
-
-.img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 101%; /*retira a borda branca do conteudo que está atrás*/
-    width: 100vw;
-    background: linear-gradient(89deg, #0C0B1C 12.81%, rgba(12, 11, 28, 0.00) 132.77%), radial-gradient(133.42% 141.28% at 28.98% 120.67%, rgba(12, 11, 28, 0.00) 53.76%, rgba(12, 11, 28, 0.43) 89.24%);
-
-
-    background-blend-mode: normal, color, soft-light, normal, normal, soft-light, normal, normal;
 }
 
 ul#banners_grid {
@@ -1138,6 +1130,7 @@ div.ms-progress-bar {
 }
 
 .btn_dados-afk{
+width: 196px;
     display: flex;
     padding: 8px 12px;
     align-items: center;
@@ -1180,37 +1173,31 @@ background: var(--Primary-Color-primary, linear-gradient(102deg, #7A00A3 1.4%, #
     background: #13112C;
 }
 
-.btn_pag-atv{
+.btn_pag-atv, .btn_pag-afk{
     display: flex;
-    height: 82px;
-    padding: 24px 16px;
+    flex-direction: row;
     align-items: center;
     gap: 12px;
     border-radius: 8px;
-    border: 1px solid var(--color-det);
-    background: rgba(204, 51, 255, 0.15);
-    color: var(--color-det);
-    min-width: 150px;
+        min-width: 150px;
+height: 82px;
+    padding: 24px 16px;
     font-size: 14px;
 font-style: normal;
 font-weight: 500;
 }
 
+.btn_pag-atv{    
+    border: 1px solid var(--color-det);
+    background: rgba(204, 51, 255, 0.15);
+    color: var(--color-det);    
+}
+
 .btn_pag-afk{
-    display: flex;
-    height: 82px;
-    padding: 24px 16px;
-    align-items: center;
-    gap: 12px;
-    border-radius: 8px;
-    border: 1px solid #615F86;
+        border: 1px solid #615F86;
     background: var(--color-bg);
     color: #615F86;
-    min-width: 150px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-}
+    }
 
 .btn_pag-afk:hover{
     color: var(--color-fg);
@@ -1427,6 +1414,7 @@ a.link{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+text-align: center;
 }
 
 .tp-grad-fill span {
@@ -1606,7 +1594,11 @@ footer form {
     margin-right: 8%;
 }
 
-#mobile {
+#desktop, .desktop{
+    display: flex;
+}
+
+#mobile, .mobile {
     display: none;
 }
 
@@ -1852,16 +1844,10 @@ td.aprov{
 }
 
 div.div_empty-data{
-    margin-top: -16px !important;
-    display: flex;
-    padding: 5%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    align-self: stretch;
-    background: #0E0D21;
+        background: #0E0D21;
     text-align: center !important;
+margin: -12px;
+    padding: 32px;
 }
 
 div.blc-1{
@@ -1872,11 +1858,11 @@ div.blc-1{
 
 div.blc_pag-1{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 24px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: 16px;
     flex: 1 0 0;
     align-self: stretch;
     border-radius: 8px;
@@ -1892,13 +1878,33 @@ div.blc_pag-1 p{
     line-height: 21px;
 }
 
+div.blc_pag-1 i{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-det);
+}
+
+.blc_pag-1 .pag_row{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pag_row span{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+}
+
 h1.bread_pag{
-    padding: 64px 64px 0 72px;
+    /* padding: 64px 64px 0 72px; */
     font-family: Inter;
     font-size: 32px;
     font-weight: 600;
     line-height: 38.4px;
-    margin-bottom: -40px !important;
+    /* margin-bottom: -40px !important; */
 }
 
 .blc-2{
@@ -1962,6 +1968,346 @@ font-weight: 900;
 line-height: 26.4px;
 }
 
+.blc_pagamento {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    padding: 48px;
+}
+
+/* R03 */
+.line_title {
+    padding: 16px 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+/* R03 */
+#home .line_title{
+    padding: 64px 64px 32px 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.blcTitle_pag{
+    padding: 64px 64px 0 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -24px;
+    width: auto;
+}
+
+.blcInter_pag{
+    margin-right: 5%;
+    width: 312px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.blcInter_pag .btn-social{
+    width: 40px !important;
+    height: auto;
+    padding: 12px;
+}
+
+.blcInter_pag p{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+    text-align: left;
+    color: rgba(92, 91, 128, 1);
+}
+
+.blc-0{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blc-0 h2{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
+.btn_aplic{
+    background: transparent;
+    color: var(--color-det);
+    border: 1px solid var(--color-det);
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+}
+
+.btn_aplic:hover{
+    background: rgba(204, 51, 255, 0.15);
+    color: var(--color-fg);
+}
+
+.valor p{
+    font-family: Inter;
+font-size: 12px;
+font-weight: 500;
+line-height: 14.4px;
+text-align: left;
+color: var(--color-fg) !important;
+}
+
+.header_pag{
+    height: 218px;
+    width: 100vw;
+    position: relative;
+}
+
+.header_pagFigure{
+    height: 218px;
+}
+
+.header_pagImg{
+    height: 218px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.imgOverlay_pag{
+    position: absolute;
+    top: 0;
+    height: 218px;
+    width: 100vw;
+    background: linear-gradient(89deg, #0C0B1C 12.81%, rgba(12, 11, 28, 0.00) 132.77%), radial-gradient(133.42% 141.28% at 28.98% 120.67%, rgba(12, 11, 28, 0.00) 53.76%, rgba(12, 11, 28, 0.43) 89.24%);
+}
+
+.header_pagTitle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.header_pagTitle h1{
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    color: var(--color-fg);
+}
+
+i.ph-shield-check{
+    color: #08A563;
+    font-size: 24px;
+}
+
+.blc_metPag{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blc_pagDisc{
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.blc_pagDisc div{
+    gap: 16px;
+}
+
+.blc_pagDisc .alert{
+    align-items: center;
+}
+
+.blc_pagDisc .alert i{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blc_pagDisc span, span.shieldText{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: rgba(134, 142, 150, 1);
+}
+
+.dadosPag{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blc_meusCursos{
+    padding: 32px 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.form_Pagcartao{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.blc-1.blc_pagDisc {
+    width: 80%;
+}
+
+figure.figure_det{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+/* Detalhe Curso */
+.img-background {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    contain: content;
+    z-index: 1;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 101%; /*retira a borda branca do conteudo que está atrás*/
+    width: 100vw;
+    background: linear-gradient(89deg, #0C0B1C 12.81%, rgba(12, 11, 28, 0.00) 132.77%), radial-gradient(133.42% 141.28% at 28.98% 120.67%, rgba(12, 11, 28, 0.00) 53.76%, rgba(12, 11, 28, 0.43) 89.24%);
+
+
+    background-blend-mode: normal, color, soft-light, normal, normal, soft-light, normal, normal;
+    z-index: 2;
+}
+
+figure.figure_det figcaption{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.blc_detCurso{
+    padding: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.blc_detCursoMaster{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.blc_detCursoMaster h1{
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
+.blc_detCursoMaster h2{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    color: var(--color-fg);
+    padding-bottom: 24px;
+    border-bottom: 2px solid rgba(43, 40, 83, 0.2);
+}
+
+.blc_detInfo{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.blc_detCursoResumo{
+    padding: 32px, 40px, 32px, 40px;
+    gap: 16px;
+}
+
+.blc_detCursoResumo h3{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
+.blc_detCursoResumo h4{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
+.blc_detCursoResumo p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    color: rgba(134, 142, 150, 1);
+}
+
+.det-form h5{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
+.det-form h6{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.8px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
+.det-form p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-align: left;
+    color: var(--color-fg);
+}
+
 /* Animações */
 @keyframes FadeIN {
     0% {
@@ -1985,16 +2331,28 @@ line-height: 26.4px;
 
 /* 7 - @media */
 @media (max-width: 700px) {
-    #mobile {
-        display: block;
+    #mobile, .mobile {
+        display: flex;
     }
+
+    #desktop, .desktop{
+        display: none;
+    }
+
+    /* body{
+        width: 85vw;
+    } */
 
     main {
         margin: 0 16px;
     }
 
-    footer {
+    /* footer {
         display: none;
+    } */
+
+    .centerMobile{
+        text-align: center;
     }
 
     .inline-end {
@@ -2055,7 +2413,11 @@ line-height: 26.4px;
 
     header{
         padding: 0;
-        width: 95vw;
+        width: 99vw;
+}
+
+    header p{
+        display: none;
     }
 
     .header-vestibular{
@@ -2134,8 +2496,20 @@ line-height: 26.4px;
         width: 60%;
     }
 
-    #home .blc-cursos .inline.gap24{
+    /* #home .blc-cursos .inline.gap24{
         display: none;
+} */
+
+    #home .line_title{
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    #home .line_title .gap24{
+        gap: 8px;
     }
 
     #home .blc-cursos .inline.pad64{
@@ -2157,10 +2531,12 @@ line-height: 26.4px;
     }
 
     footer{
-        width: 100vw;
+        width: 99vw;
         display: flex;
         padding: 8px;
         text-align: center;
+        margin: 64px 0 0 0 !important;
+        position: relative;
     }
 
     footer .inline.jc-spaceB.w100{
@@ -2178,6 +2554,13 @@ line-height: 26.4px;
         flex-direction: column;
     }
 
+    .inline.gap8.social {
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        align-items: center;
+    }
+
     #det-curso{
         width: 95vw;
         height: max-content;
@@ -2185,7 +2568,7 @@ line-height: 26.4px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8px !important;
+        padding: 24px 8px !important;
     }
 
     #det-curso .padP10{
@@ -2194,6 +2577,7 @@ line-height: 26.4px;
 
     #det-curso h1{
         text-align: center;
+        font-size: 32px;
     }
 
     #det-curso h2{
@@ -2214,10 +2598,11 @@ line-height: 26.4px;
         background-size: contain;
         background-position: center;
         width: 100vw;
-        height: 200vh;
+        height: auto;
         contain: unset;
         background-repeat: no-repeat;
-        background-position: top;        
+        background-position: top; 
+        object-fit: cover;
     }
 
     div.img-background #det-curso .w50{
@@ -2227,7 +2612,9 @@ line-height: 26.4px;
     #det-curso .blc-det-min{
         display: flex;
         flex-direction: column;
-        padding: 8px;
+        padding: 8px 16px;
+        text-align: center;
+        gap: 0;
     }
 
     .gap120{
@@ -2240,6 +2627,7 @@ line-height: 26.4px;
 
     #det-curso .blc-det{
         width: 70vw;
+        align-self: center !important;
     }
     
     #det-curso .tp-grad, #usuario .tp-grad {
@@ -2253,9 +2641,17 @@ line-height: 26.4px;
         flex-direction: column;
     }
 
+    .termos{
+        display: flex;
+        align-items: center;
+        flex-direction: row !important;
+        gap: 8px;
+        padding: 16px 0;
+    }
+
     .btn_start{
         margin-bottom: 12px;
-        width: 100%;
+        width: 100% !important;
     }
 
     .blc-iniciar{
@@ -2354,16 +2750,245 @@ line-height: 26.4px;
         padding: 8px;
         display: flex;
         flex-direction: column;
-        order: 5;
+        align-items: center;
+        width: 99vw;
     }
 
     #pagamento .blc-1{
         padding: 12px;
-        width: 85vw;
+        /* width: 85vw; */
     }
 
     #pagamento .blc-1 .inline.gap16{
         display: flex;
         flex-direction: column;
     }
+
+    #resumo {
+        /* margin-right: 0; */
+        min-width: auto;
+    }
+
+    .w40{
+        width: 80%;
+    }
+
+.w100{
+        width: auto;
+    }
+
+    .inline{
+        justify-content: center;
+    }
+
+    .header_pagTitle h1 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .blcTitle_pag {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 16px;
+        width: min-content;
+    }
+
+    h1.bread_pag {
+        padding: 8px;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 0 !important;
+    }
+
+    .blc-0 {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .btn_pag-atv, .btn_pag-afk {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 8px;
+        min-width: auto;
+        height: 100%;
+        padding: 16px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    div.blc_pag-1{
+        padding: 8px;
+    }
+
+    .shield {
+        /* width: 85vw; */
+        display: flex;
+        padding: 8px;
+    }
+
+    .form_Pagcartao {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .blc_meusCursos{
+        padding: 32px 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: fit-content;
+    
+    }
+
+    div.blc-1 {
+        padding: 8px;
+    }
+
+    .blc-1.blc_pagDisc {
+        width: 90% !important;
+        padding: 8px;
+    }
+
+    #conteudo-interno {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0;
+        max-width: 90vw;
+    }
+
+    #menu_lateral{
+        width: 90% !important;
+    }
+
+    .btn_dados-atv, .btn_dados-afk{
+        width: auto;
+        justify-content: center;
+    }
+
+    div.div_empty-data {
+        width: min-content;
+    }
+
+    /* Tables */
+    .table_multi{
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+        width: 90vw;
+    }
+
+    .table_multi tr{
+        display: flex;
+        flex-direction: column
+    }
+
+    .table_multi thead{
+        padding: 8px;
+    }
+
+    .table_multi tbody{
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        width: max-content;
+        
+    }
+
+    .table_multi thead th, .table_multi tbody td{
+        min-width: auto;
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .table_multi tbody td{
+        padding: 12px 24px;
+        width: max-content;
+        text-align: left;
+    }
+
+    td.aprov {
+        padding: 12px 24px !important;
+    }
+
+    /* .img-background{
+        height: 100vh;
+        width: auto;
+    } */
+
+    .blc_detCurso{
+        position: relative;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 64px;
+    }
+    
+    .blc_detCursoMaster{
+        width: 100%;
+        max-width: 88vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .blc_detCursoMaster h1{
+        text-align: center;
+    }
+
+    .blc_detCursoMaster h2{
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .blc_detCursoResumo{
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+    
+    .blc_detInfo{
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .blc_detInfo .inline.blc-det-min{
+        flex-direction: column;
+        padding: 24px 16px;
+    }
+
+    .det-med-curso select.formText{
+        width: 100% !important;
+    }
+
+    .blc_detPassos{
+        padding: 16px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .blc_detPassos span.check p{
+        color: #08A563 !important;
+    }
+
 }
