@@ -968,6 +968,14 @@ ul.matriz li:last-child {
     width: 80%;
 }
 
+.listaBW {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0;
+    width: 100%;
+}
+
 #carrinho_finalizar .coluna_p {
     display: flex;
     flex-direction: column;
