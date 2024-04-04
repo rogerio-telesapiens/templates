@@ -1357,6 +1357,7 @@ a.link{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
 }
 
@@ -1765,7 +1766,8 @@ p.etapa-afk, span.etapa-afk {
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    margin: 0;    
+    margin: 0;
+    z-index: 9;   
 }
 
 video.home-video {
@@ -1844,16 +1846,17 @@ td.aprov{
 }
 
 div.div_empty-data{
-        background: #0E0D21;
+    background: #0E0D21;
     text-align: center !important;
-margin: -12px;
     padding: 32px;
+    margin-right: 90px;
 }
 
 div.blc-1{
     background: #0E0D21;
     padding: 32px;
     border-radius: 4px;
+    min-width: 60vw;
 }
 
 div.blc_pag-1{
@@ -2212,6 +2215,7 @@ figure.figure_det figcaption{
 }
 
 .blc_detCurso{
+    width: 85vw;
     padding: 64px;
     display: flex;
     flex-direction: row;
@@ -2256,8 +2260,8 @@ figure.figure_det figcaption{
 }
 
 .blc_detCursoResumo{
-    padding: 32px, 40px, 32px, 40px;
-    gap: 16px;
+    padding: 32px 40px 32px 40px;
+    gap: 0;
 }
 
 .blc_detCursoResumo h3{
@@ -2845,12 +2849,14 @@ figure.figure_det figcaption{
         flex-direction: column;
         align-items: center;
         gap: 16px;
+        min-width: 90vw;
         width: fit-content;
     
     }
 
     div.blc-1 {
         padding: 8px;
+        min-width: 75vw;
     }
 
     .blc-1.blc_pagDisc {
@@ -2989,6 +2995,10 @@ figure.figure_det figcaption{
 
     .blc_detPassos span.check p{
         color: #08A563 !important;
+    }
+
+    .blc_pagamento{
+        flex-direction: column;
     }
 
 }
