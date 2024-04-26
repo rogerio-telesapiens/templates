@@ -2334,7 +2334,7 @@ span.input-group-text {
     padding: 24px;
 }
 
-.div_blcMain{
+.div_blcMain {
     width: 100%;
     max-width: 90vw;
     padding: 48px 96px;
@@ -2344,14 +2344,14 @@ span.input-group-text {
     max-width: 90vw;
 }
 
-.div_blcContent{
+.div_blcContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 32px;
 }
 
-.div_blcContentIntern{
+.div_blcContentIntern {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -2362,11 +2362,11 @@ span.input-group-text {
     box-shadow: 0px 0px 42.79999923706055px 0px rgba(0, 0, 0, 0.1);
 }
 
-.div_blcContentIntern.pag{
+.div_blcContentIntern.pag {
     width: 60%;
 }
 
-.div_blcContentIntern.pag .row{
+.div_blcContentIntern.pag .row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -2374,37 +2374,37 @@ span.input-group-text {
     align-items: baseline;
 }
 
-.div_blcContentIntern h2{
+.div_blcContentIntern h2 {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
 }
 
-.div_blcContentIntern h3{
+.div_blcContentIntern h3 {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
 }
 
-.div_blcIntern{
+.div_blcIntern {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.div_blcIntern i.attn{
+.div_blcIntern i.attn {
     color: var(--cor-Primaria);
     font-weight: 500;
     font-size: 18px;
 }
 
-.btn_simple-sc.grey{
-    width: 100%; 
-    border-radius: 8px; 
-    height: 35px; 
-    padding: 16px;  
-    background-color: #EEEEEE; 
-    color: #168EEA; 
+.btn_simple-sc.grey {
+    width: 100%;
+    border-radius: 8px;
+    height: 35px;
+    padding: 16px;
+    background-color: #EEEEEE;
+    color: #168EEA;
     font-weight: 600;
 }
 
@@ -3038,7 +3038,7 @@ span.input-group-text {
         text-align: left;
     }
 
-    .div_blcMain{
+    .div_blcMain {
         width: 100%;
         max-width: 90vw;
         padding: 16px 32px;
@@ -3046,15 +3046,15 @@ span.input-group-text {
         flex-direction: column;
         gap: 16px;
     }
-    
-    .div_blcContent{
+
+    .div_blcContent {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         gap: 32px;
     }
-    
-    .div_blcContentIntern{
+
+    .div_blcContentIntern {
         width: 85%;
         display: flex;
         flex-direction: column;
@@ -3065,58 +3065,59 @@ span.input-group-text {
         box-shadow: 0px 0px 42.79999923706055px 0px rgba(0, 0, 0, 0.1);
     }
 
-    .div_blcContentIntern.resume{
+    .div_blcContentIntern.resume {
         order: 2;
     }
-    
-    .div_blcContentIntern.pag{
+
+    .div_blcContentIntern.pag {
         margin-top: -36px;
         width: 85%;
         order: 1;
     }
 
-    .div_blcContentIntern.pag .inline-flex.gap-16.end{
+    .div_blcContentIntern.pag .inline-flex.gap-16.end {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .row input.formText{
+    .row input.formText {
         width: 100% !important;
     }
 
     /* Tables */
-    .tableForm-det{
+    .tableForm-det {
         display: flex;
         flex-direction: row;
         overflow-x: hidden;
         width: 90vw;
     }
 
-    .tableForm-det tr{
+    .tableForm-det tr {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    .tableForm-det thead{
+    .tableForm-det thead {
         padding: 8px;
     }
 
-    .tableForm-det tbody{
+    .tableForm-det tbody {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
         width: max-content;
-        
+
     }
 
-    .tableForm-det thead th, .tableForm-det tbody td{
+    .tableForm-det thead th, .tableForm-det tbody td {
         min-width: auto;
         margin: 8px;
         padding: 12px;
     }
 
-    .tableForm-det tbody td{
+    .tableForm-det tbody td {
         padding: 12px 24px;
         width: max-content;
         text-align: left;
@@ -3126,5 +3127,11 @@ span.input-group-text {
         padding: 12px 24px !important;
     }
 
+    #perfil .inline-titulo,
+    #meus_cursos .inline-titulo,
+    #meus_pedidos .inline-titulo {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
 
 }
