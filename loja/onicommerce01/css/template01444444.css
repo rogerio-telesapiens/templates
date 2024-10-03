@@ -2890,11 +2890,6 @@ span.input-group-text {
         margin-top: -24px;
     }
 
-    .list_cardNumber .blc_cardNumber{
-        width: calc(100% - 32px) !important;
-        align-items: center;
-    }
-
     #mensagem .blc-default,
     #mensagem .form-group {
         gap: 16px;
@@ -3139,20 +3134,4 @@ span.input-group-text {
         gap: 16px;
     }
 
-}
-
-@media (max-width: 700px) {
-    #home_default{
-        padding: 0 24px !important;
-    }
-
-    .carousel_content {
-        width: calc(100vw - 16px) !important;
-        left: 50% !important;
-        transform: translateX(-50%);
-    }
-
-    .card_curso{
-      width: calc(100vw - 36px - 36px -36px) !important; 
-    }
 }
