@@ -3141,6 +3141,62 @@ span.input-group-text {
 
 }
 
+.listReuniaoStatic{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: stretch;
+    gap: 24px 16px;
+ }
+ 
+ .listReuniaoStatic .card_curso{
+    width: calc(((100% / 4) - 64px) + 2px);
+    background: transparent;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+ }
+
+ul.pagination{
+   padding: 36px 0;
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.page-item .page-link {
+   z-index: 2;
+   padding: 4px 8px;
+   border-radius: 4px;
+   border-color: var(--cor-Primaria);
+   color: var(--color-fg);
+}
+
+.page-link:hover {
+   background-color: var(--cor-Primaria);
+   color: white !important;
+}
+
+.page-item.disabled .page-link {
+   display: none;
+}
+
+.page-item.active .page-link {
+   z-index: 2;
+   padding: 4px 8px;
+   background: var(--cor-Primaria-Hover);
+   border-radius: 4px;
+   border-color: var(--cor-Primaria);
+   color: white !important;
+}
+
 @media (max-width: 700px) {
     #home_default{
         padding: 0 24px !important;
@@ -3153,6 +3209,10 @@ span.input-group-text {
     }
 
     .card_curso{
-      width: calc(100vw - 36px - 36px -36px) !important; 
+      width: calc(100vw - 36px - 36px - 36px) !important; 
+    }
+
+    .listReuniaoStatic{
+        justify-content: center;
     }
 }
